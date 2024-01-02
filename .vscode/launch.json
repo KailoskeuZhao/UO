@@ -3,6 +3,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "wocao",
+            "request": "launch",
+            "mainClass": "wocao",
+            "projectName": "UO_2bd8aac6"
+        },
+        {
+            "type": "java",
             "name": "lamdbaTest",
             "request": "launch",
             "mainClass": "TestGround.lamdbaTest",
