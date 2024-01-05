@@ -1,4 +1,5 @@
 #include <bits/stdc++.h>
+#include <iostream>
 
 using namespace std;
 
@@ -38,8 +39,10 @@ int main(){
     for(int a = 1; a < N-1; a++){
         if( (sto[a] > sto[a-1]) && (sto[a] > sto[a+1])){
             BH = sto[a];
+            break;
         } else if( (sto[a] < sto[a-1]) && (sto[a] < sto[a+1])){
             BH = sto[a];
+            break;
         }
     }
    }
@@ -61,8 +64,9 @@ int main(){
     else if(BH > firstplaces[firstplaces.size()-1].second) op = ((firstplaces.size() - 1) - thisloc);
     else{
         for(int a = 0; a < firstplaces.size()-1; a++){
-            if(BH > firstplaces[a].second && BH < firstplaces[a+1].second){
-                reqloc = a+1;
+            if(BH >= firstplaces[a].second && BH <= firstplaces[a+1].second){
+                if(thisloc > a) {reqloc = a+1;}
+                else {reqloc = a;}
                 break;
             }
         }
@@ -70,7 +74,7 @@ int main(){
         op = abs(reqloc - thisloc);
     }
 
-    //freopen("outofplace.out", "w", stdout);
+    freopen("outofplace.out", "w", stdout);
     cout << op << endl;
 
     

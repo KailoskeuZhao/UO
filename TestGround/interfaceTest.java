@@ -1,7 +1,7 @@
 package TestGround;
 
 
-    interface Say{
+    public interface Say{
          void sa();
     }
 
